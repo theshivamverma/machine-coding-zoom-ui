@@ -1,4 +1,65 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
+header {
+  text-align: center;
+  background-color: cornflowerblue;
+  color: #fff;
+  height: 40px;
+  padding: 0.5rem 0;
+  font-size: 0.7rem;
+}
+
+.meeting {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+}
+
+.participants {
+  width: 75%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.control-panel {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: auto;
+}
+
+.control-panel__card {
+  width: 100%;
+  padding: 1rem 2rem;
+  box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+@media (max-width: 768px) {
+  .meeting {
+    flex-direction: column;
+  }
+
+  .participants {
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .control-panel {
+    width: 100%;
+    height: 40vh;
+  }
+}

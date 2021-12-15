@@ -1,0 +1,36 @@
+.participant-card {
+  background-color: #000;
+  border: 2px solid #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.participant-name {
+  color: #fff;
+}
+
+.participant-card i {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: cornflowerblue;
+  border-radius: 50%;
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .participant-name {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .participant-card i {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
